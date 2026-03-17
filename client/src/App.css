@@ -1,5 +1,25 @@
 @import "tailwindcss";
 
+
+@theme {
+
+  --breakpoint-sm: 10rem;
+  --breakpoint-md: 20rem;
+  --breakpoint-lg: 30rem;
+
+  --breakpoint-xl: 40rem;
+  --breakpoint-2xl: 50rem;
+  --breakpoint-3xl: 120rem;
+
+  --color-*: initial;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-green-500: #24562A;
+  --color-green-900: #0B1A0C;
+
+}
+
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
