@@ -12,10 +12,14 @@
   --color-*: initial;
   --color-white: #FFFFFF;
   --color-black: #000000;
+  /** Green **/
   --color-green-200: #3B9145;
   --color-green-500: #24562A;
   --color-green-900: #0B1A0C;
+  /** Amber **/
+  --color-amber-500: #FFD083;
 
+  --color-yellow-900: #FFD800;
 
 }
 

@@ -20,7 +20,7 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="w-full bg-green-500 text-white py-2">
+      <div className="w-full bg-green-500 text-white py-2 border-b border-white">
         <div className="container mx-auto flex justify-between px-3">
           <h2 className="text-3xl">Logo</h2>
           <SearchBar />
@@ -37,12 +37,11 @@ export default function Header() {
       </div>
       {/* Menu*/}
       <nav
-        className={`${isOpen ? "block" : "hidden"} absolute w-full h-full py-6 
-        bg-green-500 text-white lg:py-0 lg:static lg:block lg:bg-green-200
-         hover`}
+        className={`${isOpen ? "translate-x-0" : "-translate-x-full"} fixed w-full h-full py-6 
+        bg-green-500 text-white lg:py-0 lg:static lg:block lg:translate-0 lg:bg-green-200 transition-transform`}
       >
         <div className="container mx-auto px-3">
-          <ul className="lg:flex gap-5">
+          <ul className="lg:flex gap-8">
             <li className="relative group">
               <Link
                 to=""
@@ -50,7 +49,7 @@ export default function Header() {
               >
                 Onze drankjes
               </Link>
-              <ul className="hidden group-hover:block absolute bg-green-200">
+              <ul className="opacity-0 group-hover:opacity-100 transition-opacity absolute bg-green-200">
                 <li>
                   <Link className="block px-3 py-2 w-60" to="">
                     Gemberbier
@@ -73,7 +72,7 @@ export default function Header() {
                 </li>
               </ul>
             </li>
-            <li>
+            <li className="border-green-500 ">
               <Link
                 to=""
                 className="text-xl lg:text-base font-medium py-3 block"
@@ -97,7 +96,7 @@ export default function Header() {
                 FAQ
               </Link>
             </li>
-            <li className="text-xl lg:text-base font-medium  py-3 block">
+            <li className="text-xl lg:text-base font-medium py-3 block">
               <Link to="">Contact</Link>
             </li>
           </ul>

@@ -19,6 +19,7 @@ export default function SearchBar() {
     >
       <SearchIcon color="#000000" />
       <input
+        id="query"
         className="h-full w-full"
         type="text"
         placeholder="Zoeken..."
