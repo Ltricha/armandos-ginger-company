@@ -1,4 +1,6 @@
 import ProductCard from "../components/ProductCard";
+import Carousel from "../components/ui/Carousel";
+
 export default function Home() {
   return (
     <main>
@@ -25,6 +27,9 @@ export default function Home() {
             dignissimos suscipit porro. Recusandae.
           </p>
         </div>
+      </section>
+      <section>
+        <Carousel />
       </section>
     </main>
   );
