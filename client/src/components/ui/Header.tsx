@@ -22,7 +22,7 @@ export default function Header() {
 
       <div className="w-full bg-green-500 text-white py-2 border-b border-white">
         <div className="container mx-auto flex justify-between px-3">
-          <h2 className="text-3xl">Logo</h2>
+          <span className="text-3xl">Logo</span>
           <SearchBar />
           <div className="flex gap-5">
             <button className="">NL</button>
