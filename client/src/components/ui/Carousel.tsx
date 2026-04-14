@@ -63,9 +63,9 @@ export default function Carousel() {
   const itemList = items.map((item, index) => (
     <li
       key={index}
-      className={`${item.image} ${count === index ? "opacity-100" : "opacity-0"} w-full`}
+      className={`${item.image} ${count === index ? "block" : "hidden"} w-full transition-opacity`}
     >
-      {item.text}
+      <div className="container mx-auto py-3">{item.text}</div>
     </li>
   ));
   return (
@@ -73,7 +73,7 @@ export default function Carousel() {
       <button
         className="absolute"
         onClick={() => {
-          console.log("I've been clicked.");
+          console.log("I have been clicked.");
           startInterval();
           previous();
         }}
@@ -84,7 +84,6 @@ export default function Carousel() {
       <button
         className="absolute right-0"
         onClick={() => {
-          console.log("I've been clicked.");
           startInterval();
           next();
         }}
