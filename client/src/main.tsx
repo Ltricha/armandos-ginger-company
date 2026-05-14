@@ -1,15 +1,16 @@
 import { createRoot } from "react-dom/client";
-import { BrowserRouter } from "react-router";
+import { BrowserRouter, Routes, Route } from "react-router";
 
 import "./index.css";
-import Header from "./components/ui/Header.tsx";
-import MobileMenu from "./components/ui/MobileMenu.tsx";
-import Home from "./pages/Home.tsx";
+import Header from "./shared/components/ui/Header.tsx";
+import MobileMenu from "./shared/components/ui/MobileMenu.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
     <Header />
-    <Home />
+    <Routes>
+      <Route path="/" element={<div>Page here</div>} />
+    </Routes>
     <MobileMenu />
   </BrowserRouter>,
 );
