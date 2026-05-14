@@ -1,7 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import one from "../../assets/carousel/one.jpg";
-import two from "../../assets/carousel/two.jpg";
-import three from "../../assets/carousel/three.jpg";
 
 interface ICarouselItem {
   text: string;
