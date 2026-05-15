@@ -49,7 +49,7 @@ export default function Header() {
               >
                 Onze drankjes
               </Link>
-              <ul className="opacity-0 group-hover:opacity-100 transition-opacity absolute bg-green-200">
+              <ul className="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-opacity absolute bg-green-200">
                 <li>
                   <Link className="block px-3 py-2 w-60" to="">
                     Gemberbier
