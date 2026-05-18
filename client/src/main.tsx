@@ -12,7 +12,7 @@ createRoot(document.getElementById("root")!).render(
     <Header />
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/products" element={<Products />}></Route>
+      <Route path={`/drinks/:category`} element={<Products />}></Route>
     </Routes>
     <MobileMenu />
   </BrowserRouter>,
