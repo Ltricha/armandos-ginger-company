@@ -2,8 +2,8 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router";
 
 import "./index.css";
-import Header from "./components/ui/Header.tsx";
-import MobileMenu from "./components/ui/MobileMenu.tsx";
+import Header from "./shared/components/ui/Header.tsx";
+import MobileMenu from "./shared/components/ui/MobileMenu.tsx";
 import Home from "./pages/Home.tsx";
 import Products from "./features/products/pages/Products.tsx";
 
