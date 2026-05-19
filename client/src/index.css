@@ -83,9 +83,9 @@ button {
   outline: none;
 }
 
-button:hover {
+/* button:hover {
   border-color: #646cff;
-}
+} */
 
 button:focus,
 button:focus-visible {}

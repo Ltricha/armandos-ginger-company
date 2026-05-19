@@ -90,24 +90,24 @@ const products: Product[] = [
 
 export default function Products() {
   const params = useParams();
-  console.log(params.category);
+
   return (
     <main>
       <section className="py-5">
-        <div className="max-w-5xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-6">
           <h2>{params.category}</h2>
         </div>
       </section>
       <section>
-        <div className="max-w-5xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-6">
           <span>12 resultaten</span>
         </div>
       </section>
       <section className="py-5">
-        <div className="max-w-5xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
             {products.map((product) => (
-              <ProductCard product={product} />
+              <ProductCard key={product.id} product={product} />
             ))}
           </div>
         </div>

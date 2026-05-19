@@ -24,32 +24,34 @@ export default function ProductCard({ product }: ProductCardProps) {
       <button className="absolute top-4.5 right-4.5" onClick={addToWishlist}>
         <FavoriteIcon />
       </button>
-      <Link
-        className="p-1.5 block"
-        to={`/drinks/${product.category}/${product.uuid}`}
-      >
-        <div className="flex flex-col gap-4">
+
+      <div className="flex flex-col gap-4">
+        <Link className="" to={`/drinks/${product.category}/${product.uuid}`}>
           <img
             className="rounded"
             src={product.images[0]}
             alt={product.description}
           />
-          <div className="flex flex-col">
-            <span className="font-bold hover:underline">{product.title}</span>
-            <span>{product.price}</span>
-          </div>
+        </Link>
 
-          <button
-            className="flex justify-center gap-2.5 border border-green-200 text-sm font-medium text-green-200 hover:text-green-500 rounded p-2"
-            onClick={(e) => {
-              addToCart(e);
-            }}
-          >
-            <span>In Winkelwagen</span>
-            <AddShoppingCartIcon fill={"#3b9145"} />
-          </button>
+        <div className="flex flex-col">
+          <Link className="" to={`/drinks/${product.category}/${product.uuid}`}>
+            <span className="font-bold hover:underline">{product.title}</span>
+          </Link>
+
+          <span>{product.price}</span>
         </div>
-      </Link>
+
+        <button
+          className="flex justify-center gap-2.5 border border-green-200 hover:border-green-500 text-sm font-medium text-green-200 hover:text-green-500 rounded p-2 cursor-pointer"
+          onClick={(e) => {
+            addToCart(e);
+          }}
+        >
+          <span>In Winkelwagen</span>
+          <AddShoppingCartIcon fill={"#3b9145"} />
+        </button>
+      </div>
     </div>
   );
 }
