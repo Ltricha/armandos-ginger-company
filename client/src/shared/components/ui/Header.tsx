@@ -3,8 +3,8 @@ import { useState } from "react";
 import MenuIcon from "../icons/MenuIcon";
 import CloseIcon from "../icons/CloseIcon";
 import SearchBar from "../forms/SearchBar";
-import ShoppingCartIcon from "../icons/ShoppingCartIcon";
 import Accordion from "./Accordion";
+import ShoppingCartIcon from "../icons/ShoppingCartIcon";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,10 +16,10 @@ export default function Header() {
   const accordionData = {
     title: "Onze drankjes",
     items: [
-      { label: "Gemberbier", href: "/drankjes/gemberbier" },
-      { label: "Markoesa", href: "/drankjes/markoesa" },
-      { label: "Orgeade", href: "/drankjes/orgeade" },
-      { label: "Zuurzak", href: "/drankjes/zuurzak" },
+      { label: "Gemberbier", href: "/drinken/gemberbier" },
+      { label: "Markoesa", href: "/drinken/markoesa" },
+      { label: "Orgeade", href: "/drinken/orgeade" },
+      { label: "Zuurzak", href: "/drinken/zuurzak" },
     ],
   };
 
