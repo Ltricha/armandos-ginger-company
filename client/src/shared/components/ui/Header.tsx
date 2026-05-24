@@ -56,7 +56,7 @@ export default function Header() {
             <li className="relative group flex">
               <Accordion accordion={accordionData} />
             </li>
-            <li className="border-green-500 ">
+            <li className="">
               <Link
                 to="/about"
                 className="text-xl lg:text-base font-medium py-3 block"
