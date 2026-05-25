@@ -49,7 +49,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           }}
         >
           <span>In Winkelwagen</span>
-          <AddShoppingCartIcon fill={"#3b9145"} />
+          <AddShoppingCartIcon fill="currentColor" />
         </button>
       </div>
     </div>
