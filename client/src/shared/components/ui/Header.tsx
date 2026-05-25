@@ -41,7 +41,7 @@ export default function Header() {
               <ShoppingCartIcon />
             </button>
             <button className="lg:hidden" onClick={handleOnClick}>
-              {isOpen ? <CloseIcon color="#FFFFFF" /> : <MenuIcon />}
+              {isOpen ? <CloseIcon /> : <MenuIcon />}
             </button>
           </div>
         </div>
