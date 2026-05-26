@@ -38,7 +38,7 @@ export default function Header() {
       {/* Menu*/}
       <nav
         className={`${isOpen ? "translate-x-0" : "-translate-x-full"} fixed w-full h-full py-6 
-        bg-green-500 text-white lg:py-0 lg:static lg:block lg:translate-0 lg:bg-green-200 transition-transform`}
+        bg-green-500 text-white lg:py-0 lg:static lg:block lg:translate-0 lg:bg-green-200 transition-transform z-50`}
       >
         <div className="max-w-6xl mx-auto px-6 flex flex-col lg:flex-row justify-between gap-10">
           <ul className="flex flex-col gap-8 lg:flex-row">
