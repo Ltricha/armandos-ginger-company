@@ -13,16 +13,16 @@ export default function Header() {
   }
 
   return (
-    <header>
+    <header className="shadow-2xl">
       <div className="bg-green-900 text-white">
-        <div className="container mx-auto px-3">
+        <div className="max-w-6xl mx-auto px-6">
           Volg ons op: Instagram, facebook, snapchat
         </div>
       </div>
 
-      <div className="w-full bg-green-500 text-white py-2 border-b border-white">
-        <div className="container mx-auto flex justify-between px-3">
-          <h2 className="text-3xl">Logo</h2>
+      <div className="w-full bg-green-500 text-white py-3 border-b border-white">
+        <div className="max-w-6xl mx-auto px-6 flex justify-between">
+          <span className="text-3xl">Logo</span>
           <SearchBar />
           <div className="flex gap-5">
             <button className="">NL</button>
@@ -30,7 +30,7 @@ export default function Header() {
               <ShoppingCartIcon />
             </button>
             <button className="lg:hidden" onClick={handleOnClick}>
-              {isOpen ? <CloseIcon color="#FFFFFF" /> : <MenuIcon />}
+              {isOpen ? <CloseIcon /> : <MenuIcon />}
             </button>
           </div>
         </div>
@@ -38,66 +38,71 @@ export default function Header() {
       {/* Menu*/}
       <nav
         className={`${isOpen ? "translate-x-0" : "-translate-x-full"} fixed w-full h-full py-6 
-        bg-green-500 text-white lg:py-0 lg:static lg:block lg:translate-0 lg:bg-green-200 transition-transform`}
+        bg-green-500 text-white lg:py-0 lg:static lg:block lg:translate-0 lg:bg-green-200 transition-transform z-50`}
       >
-        <div className="container mx-auto px-3">
-          <ul className="lg:flex gap-8">
-            <li className="relative group">
+        <div className="max-w-6xl mx-auto px-6 flex flex-col lg:flex-row justify-between gap-10">
+          <ul className="flex flex-col gap-8 lg:flex-row">
+            <li>
               <Link
-                to=""
-                className="text-xl lg:text-base font-medium py-3 block"
+                className="text-xl lg:text-base font-medium py-3 block hover:text-amber-500"
+                to="drinks/gemberbier"
               >
-                Onze drankjes
-              </Link>
-              <ul className="opacity-0 group-hover:opacity-100 transition-opacity absolute bg-green-200">
-                <li>
-                  <Link className="block px-3 py-2 w-60" to="">
-                    Gemberbier
-                  </Link>
-                </li>
-                <li>
-                  <Link className="block px-3 py-2 w-60" to="">
-                    Markoesa
-                  </Link>
-                </li>
-                <li>
-                  <Link className="block px-3 py-2 w-60" to="">
-                    Orgeade
-                  </Link>
-                </li>
-                <li>
-                  <Link className="block px-3 py-2 w-60" to="">
-                    Zuurzak
-                  </Link>
-                </li>
-              </ul>
-            </li>
-            <li className="border-green-500 ">
-              <Link
-                to=""
-                className="text-xl lg:text-base font-medium py-3 block"
-              >
-                About
+                Gemberbier
               </Link>
             </li>
             <li>
               <Link
-                to=""
-                className="text-xl lg:text-base font-medium py-3 block "
+                className="text-xl lg:text-base font-medium py-3 block hover:text-amber-500"
+                to="drinks/markoesa"
+              >
+                Markoesa
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="text-xl lg:text-base font-medium py-3 block hover:text-amber-500"
+                to="drinks/orgaede"
+              >
+                Orgaede
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="text-xl lg:text-base font-medium py-3 block hover:text-amber-500"
+                to="drinks/zuurzak"
+              >
+                Zuurzak
+              </Link>
+            </li>
+          </ul>
+          <hr></hr>
+          <ul className="flex flex-col lg:flex-row gap-8 ">
+            <li className="">
+              <Link
+                to="/about"
+                className="text-xl lg:text-base font-medium py-3 block hover:text-amber-500"
+              >
+                Over ons
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/blog"
+                className="text-xl lg:text-base font-medium py-3 block hover:text-amber-500"
               >
                 Blog
               </Link>
             </li>
             <li>
               <Link
-                to=""
-                className="text-xl lg:text-base font-medium py-3 block"
+                to="/faq"
+                className="text-xl lg:text-base font-medium py-3 block hover:text-amber-500"
               >
                 FAQ
               </Link>
             </li>
-            <li className="text-xl lg:text-base font-medium py-3 block">
-              <Link to="">Contact</Link>
+            <li className="text-xl lg:text-base font-medium py-3 bloc hover:text-amber-500">
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
         </div>
