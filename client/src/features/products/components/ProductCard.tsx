@@ -2,8 +2,8 @@ import { Link } from "react-router";
 import type { Product } from "../types/Product";
 import FavoriteIcon from "../../../shared/components/icons/FavoriteIcon";
 import AddShoppingCartIcon from "../../../shared/components/icons/AddShoppingCartIcon";
-import Toast from "../../../shared/components/ui/Toast";
-import { useState } from "react";
+// import Toast from "../../../shared/components/ui/Toast";
+// import { useState } from "react";
 
 interface ProductCardProps {
   product: Product;
@@ -26,7 +26,7 @@ export default function ProductCard({ product }: ProductCardProps) {
       </button>
 
       <div className="flex flex-col gap-4">
-        <Link className="" to={`/drinks/${product.category}/${product.uuid}`}>
+        <Link className="" to={`/drinks/${product.category}/${product.id}`}>
           <img
             className="rounded"
             src={product.images[0]}
@@ -35,7 +35,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         </Link>
 
         <div className="flex flex-col">
-          <Link className="" to={`/drinks/${product.category}/${product.uuid}`}>
+          <Link className="" to={`/drinks/${product.category}/${product.id}`}>
             <span className="font-bold hover:underline">{product.title}</span>
           </Link>
 
