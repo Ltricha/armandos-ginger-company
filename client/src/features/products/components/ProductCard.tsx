@@ -14,7 +14,7 @@ export default function ProductCard({ product }: ProductCardProps) {
     console.log("Product toegevoegd aan verlanglijst.");
   }
 
-  function addToCart(e) {
+  function addToCart(e: React.MouseEvent<HTMLButtonElement>) {
     e.preventDefault();
     console.log("Product toegevoegd aan winkelwagen.");
   }
@@ -28,7 +28,7 @@ export default function ProductCard({ product }: ProductCardProps) {
       <div className="flex flex-col gap-4">
         <Link className="" to={`/drinks/${product.category}/${product.id}`}>
           <img
-            className="rounded"
+            className="rounded hover:scale-120 transition-transform"
             src={product.images[0]}
             alt={product.description}
           />
