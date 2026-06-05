@@ -25,8 +25,6 @@ export default function ProductDetail() {
     loadProduct();
   }, [id]);
 
-  console.log(product.images?.[0]);
-
   return (
     <main>
       <section className="py-10">
@@ -50,15 +48,13 @@ export default function ProductDetail() {
               <div className="flex justify-between">{}</div>
             </div>
             <hr />
-            <div>
-              <span className="font-bold">Aantal:</span>
-              <QuantityStepper value={count} onChange={setCount} />
-            </div>
+
             <div>
               <span className="font-bold">Totaal:</span>
               <p className="text-3xl">{(product.price * count).toFixed(2)}</p>
             </div>
-            <div className="">
+            <div className="flex flex-row gap-5">
+              <QuantityStepper value={count} onChange={setCount} />
               <button className="flex justify-center gap-2.5 border border-green-200 hover:border-green-500 text-sm font-medium text-green-200 hover:text-green-500 rounded p-2 cursor-pointer">
                 <span>In winkelwagen</span>
                 <AddShoppingCartIcon fill="currentColor" />

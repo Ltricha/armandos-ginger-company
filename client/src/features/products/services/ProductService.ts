@@ -16,7 +16,7 @@ export const productService = {
     getById: async (id: number) => {
         const res = await fetch(`${basePath}/${id}`);
 
-        console.log(res);
+
         if (!res.ok) {
             throw new Error(`Failed to fetch products: ${res.status}`);
         }
