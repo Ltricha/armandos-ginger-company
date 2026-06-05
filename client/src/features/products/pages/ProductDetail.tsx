@@ -30,9 +30,13 @@ export default function ProductDetail() {
   return (
     <main>
       <section className="py-10">
-        <div className="max-w-6xl mx-auto px-6 flex flex-col lg:flex-row justify-between">
-          <div className="">
-            <img className="w-400" src={product.images?.[0]} alt="" />
+        <div className="max-w-6xl mx-auto px-6 flex flex-col lg:flex-row gap-20">
+          <div className="max-w-200">
+            <img
+              className="w-full h-auto object-cover"
+              src={product.images?.[0]}
+              alt=""
+            />
           </div>
           <div className="flex flex-col gap-5">
             <div>
@@ -47,9 +51,12 @@ export default function ProductDetail() {
             </div>
             <hr />
             <div>
-              <p className="text-3xl">{(product.price * count).toFixed(2)}</p>
               <span className="font-bold">Aantal:</span>
               <QuantityStepper value={count} onChange={setCount} />
+            </div>
+            <div>
+              <span className="font-bold">Totaal:</span>
+              <p className="text-3xl">{(product.price * count).toFixed(2)}</p>
             </div>
             <div className="">
               <button className="flex justify-center gap-2.5 border border-green-200 hover:border-green-500 text-sm font-medium text-green-200 hover:text-green-500 rounded p-2 cursor-pointer">

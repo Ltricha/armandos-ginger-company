@@ -1,8 +1,15 @@
-import { useState } from "react";
 import RemoveIcon from "../../../shared/components/icons/RemoveIcon";
 import AddIcon from "../../../shared/components/icons/AddIcon";
 
-export default function QuantityStepper({ value, onChange }) {
+type QuantityStepperProps = {
+  value: number;
+  onChange: (value: number) => void;
+};
+
+export default function QuantityStepper({
+  value,
+  onChange,
+}: QuantityStepperProps) {
   const min = 1;
   const max = 15;
 
@@ -14,7 +21,7 @@ export default function QuantityStepper({ value, onChange }) {
     onChange(Math.max(value - 1, min));
   }
 
-  function handleOnChange(e) {
+  function handleOnChange(e: React.ChangeEvent<HTMLInputElement>) {
     const value = Number(e.target.value);
 
     if (Number.isNaN(value)) {
