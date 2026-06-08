@@ -2,8 +2,8 @@ import type { Product } from "../types/Product";
 import { useEffect, useState } from "react";
 import { productService } from "../services/ProductService";
 import { useParams } from "react-router";
-import AddShoppingCartIcon from "../../../shared/components/icons/AddShoppingCartIcon";
 import QuantityStepper from "../components/QuantityStepper";
+import AddToCartButton from "../components/buttons/AddToCartButton";
 
 export default function ProductDetail() {
   const params = useParams();
@@ -55,10 +55,7 @@ export default function ProductDetail() {
             </div>
             <div className="flex flex-row gap-5">
               <QuantityStepper value={count} onChange={setCount} />
-              <button className="flex justify-center gap-2.5 border border-green-200 hover:border-green-500 text-sm font-medium text-green-200 hover:text-green-500 rounded p-2 cursor-pointer">
-                <span>In winkelwagen</span>
-                <AddShoppingCartIcon fill="currentColor" />
-              </button>
+              <AddToCartButton product={product} quantity={count} />
             </div>
           </div>
         </div>

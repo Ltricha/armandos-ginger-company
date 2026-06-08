@@ -1,26 +1,23 @@
 import { Link } from "react-router";
 import type { Product } from "../types/Product";
 import FavoriteIcon from "../../../shared/components/icons/FavoriteIcon";
-import AddShoppingCartIcon from "../../../shared/components/icons/AddShoppingCartIcon";
 // import Toast from "../../../shared/components/ui/Toast";
-// import { useState } from "react";
+
+import AddToCartButton from "./buttons/AddToCartButton";
 
 interface ProductCardProps {
   product: Product;
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
+  const quantity = 1;
+
   function addToWishlist() {
     console.log("Product toegevoegd aan verlanglijst.");
   }
 
-  function addToCart(e: React.MouseEvent<HTMLButtonElement>) {
-    e.preventDefault();
-    console.log("Product toegevoegd aan winkelwagen.");
-  }
-
   return (
-    <div className="relative border-green-200 rounded shadow p-2 hover:border-green-900">
+    <div className="relative border-green-200 rounded shadow p-2 hover:border-green-900 h-full flex-col">
       <button className="absolute top-4.5 right-4.5" onClick={addToWishlist}>
         <FavoriteIcon />
       </button>
@@ -42,15 +39,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           <span>{product.price}</span>
         </div>
 
-        <button
-          className="flex justify-center gap-2.5 border border-green-200 hover:border-green-500 text-sm font-medium text-green-200 hover:text-green-500 rounded p-2 cursor-pointer"
-          onClick={(e) => {
-            addToCart(e);
-          }}
-        >
-          <span>In Winkelwagen</span>
-          <AddShoppingCartIcon fill="currentColor" />
-        </button>
+        <AddToCartButton product={product} quantity={quantity} />
       </div>
     </div>
   );
