@@ -15,6 +15,7 @@ createRoot(document.getElementById("root")!).render(
       <Route path="/" element={<Home />} />
       <Route path={`/drinks/:category`} element={<Products />}></Route>
       <Route path={`/drinks/:category/:id`} element={<ProductDetail />} />
+      <Route path={`/cart`} element={<ProductDetail />} />
     </Routes>
     <MobileMenu />
   </BrowserRouter>,

@@ -7,12 +7,7 @@ interface CartStore {
   cartItems: CartItem[];
   addToCart: (product: Product, quantity: number) => CartItem[];
   removeFromCart: (id: number) => void;
-  getCartItems: () => void;
 }
-
-const storeOptions = {
-  name: "cart",
-};
 
 export const useCartStore = create<CartStore>()(
   persist((set) => ({

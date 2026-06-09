@@ -4,13 +4,17 @@ import MenuIcon from "../icons/MenuIcon";
 import CloseIcon from "../icons/CloseIcon";
 import SearchBar from "../forms/SearchBar";
 import ShoppingCartIcon from "../icons/ShoppingCartIcon";
+import { useCartStore } from "../../../features/cart/store/useCartStore";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const cartItems = useCartStore((state) => state.cartItems);
 
   function handleOnClick() {
     setIsOpen((prev) => !prev);
   }
+
+  function handleOnCartClick() {}
 
   return (
     <header className="shadow-2xl">
@@ -26,9 +30,19 @@ export default function Header() {
           <SearchBar />
           <div className="flex gap-5">
             <button className="">NL</button>
-            <button className="hidden lg:block">
+            <Link
+              className="hidden lg:flex relative items-center justify-center"
+              to={"/cart"}
+            >
+              {cartItems.length > 0 && (
+                <div className="absolute top-0 -right-1.5 text-xs bg-red-500 py-.5 px-1 rounded-full text-white font-medium">
+                  {cartItems.length}
+                </div>
+              )}
+
               <ShoppingCartIcon />
-            </button>
+            </Link>
+
             <button className="lg:hidden" onClick={handleOnClick}>
               {isOpen ? <CloseIcon /> : <MenuIcon />}
             </button>
