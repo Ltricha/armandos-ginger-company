@@ -14,8 +14,6 @@ export default function Header() {
     setIsOpen((prev) => !prev);
   }
 
-  function handleOnCartClick() {}
-
   return (
     <header className="shadow-2xl">
       <div className="bg-green-900 text-white">
@@ -35,7 +33,7 @@ export default function Header() {
               to={"/cart"}
             >
               {cartItems.length > 0 && (
-                <div className="absolute top-0 -right-1.5 text-xs bg-red-500 py-.5 px-1 rounded-full text-white font-medium">
+                <div className="flex align-middle justify-center absolute top-0 -right-1.5 text-xs bg-red-500 w-4.5 h-4 rounded-full text-white font-medium">
                   {cartItems.length}
                 </div>
               )}

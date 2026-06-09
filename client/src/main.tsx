@@ -7,6 +7,7 @@ import MobileMenu from "./shared/components/ui/MobileMenu.tsx";
 import Home from "./pages/Home.tsx";
 import Products from "./features/products/pages/Products.tsx";
 import ProductDetail from "./features/products/pages/ProductDetail.tsx";
+import Cart from "./features/cart/pages/Cart.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
@@ -15,7 +16,7 @@ createRoot(document.getElementById("root")!).render(
       <Route path="/" element={<Home />} />
       <Route path={`/drinks/:category`} element={<Products />}></Route>
       <Route path={`/drinks/:category/:id`} element={<ProductDetail />} />
-      <Route path={`/cart`} element={<ProductDetail />} />
+      <Route path={`/cart`} element={<Cart />} />
     </Routes>
     <MobileMenu />
   </BrowserRouter>,

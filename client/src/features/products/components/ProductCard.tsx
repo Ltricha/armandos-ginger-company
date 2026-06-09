@@ -2,8 +2,8 @@ import { Link } from "react-router";
 import type { Product } from "../types/Product";
 import FavoriteIcon from "../../../shared/components/icons/FavoriteIcon";
 // import Toast from "../../../shared/components/ui/Toast";
-
 import AddToCartButton from "./buttons/AddToCartButton";
+import CartModal from "../../cart/components/CartModal";
 
 interface ProductCardProps {
   product: Product;
@@ -17,7 +17,7 @@ export default function ProductCard({ product }: ProductCardProps) {
   }
 
   return (
-    <div className="relative border-green-200 rounded shadow p-2 hover:border-green-900 h-full flex-col">
+    <div className="relative bg-(--bg-color-secondary) rounded shadow p-2 hover:border-green-900 h-full flex-col">
       <button className="absolute top-4.5 right-4.5" onClick={addToWishlist}>
         <FavoriteIcon />
       </button>
@@ -41,6 +41,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
         <AddToCartButton product={product} quantity={quantity} />
       </div>
+      {/* <CartModal /> */}
     </div>
   );
 }

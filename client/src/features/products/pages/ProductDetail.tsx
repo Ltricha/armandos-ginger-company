@@ -51,7 +51,7 @@ export default function ProductDetail() {
 
             <div>
               <span className="font-bold">Totaal:</span>
-              <p className="text-3xl">{(product.price * count).toFixed(2)}</p>
+              <p className="text-3xl">{product.price * count}</p>
             </div>
             <div className="flex flex-row gap-5">
               <QuantityStepper value={count} onChange={setCount} />

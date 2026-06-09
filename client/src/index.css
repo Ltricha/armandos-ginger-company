@@ -8,6 +8,15 @@
 
   --breakpoint-xl: 1280px;
 
+  --bg-color-primary: #fff5ea;
+  --bg-color-secondary: #fffaf6;
+
+  --primary-color: #fff;
+  --secondary-color: #fff;
+  --tetriary-color: #fff;
+  --accent-color: #EBD15F;
+
+
   /* 
   --color-*: initial; */
   --color-white: #FFFFFF;
@@ -50,6 +59,7 @@
 } */
 
 body {
+  background: var(--bg-color-primary);
   font-size: 16px;
   margin: 0;
   padding: 0;
