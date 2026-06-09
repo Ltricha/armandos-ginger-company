@@ -26,7 +26,7 @@ export default function AddToCartButton({
 
   return (
     <button
-      className={`flex justify-center gap-2.5 border border-green-200 text-sm font-medium text-green-200 rounded p-2 cursor-pointer transition-all ${added ? "text-white bg-green-200 hover:bg-green-500" : "hover:border-green-500 bg-white"}`}
+      className={`flex justify-center w-full gap-2.5 border border-green-200 text-sm font-medium text-green-200 rounded p-2 cursor-pointer transition-all ${added ? "text-white bg-green-200 hover:bg-green-500" : "hover:border-green-500 bg-white"}`}
       onClick={handleOnClick}
     >
       <span>In Winkelwagen</span>

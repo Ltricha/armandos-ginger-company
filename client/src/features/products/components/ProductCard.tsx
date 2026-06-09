@@ -17,7 +17,7 @@ export default function ProductCard({ product }: ProductCardProps) {
   }
 
   return (
-    <div className="relative bg-(--bg-color-secondary) rounded shadow p-2 hover:border-green-900 h-full flex-col">
+    <div className="flex relative bg-(--bg-color-secondary) rounded shadow p-2 hover:border-green-900 h-full ">
       <button className="absolute top-4.5 right-4.5" onClick={addToWishlist}>
         <FavoriteIcon />
       </button>
@@ -39,7 +39,9 @@ export default function ProductCard({ product }: ProductCardProps) {
           <span>{product.price}</span>
         </div>
 
-        <AddToCartButton product={product} quantity={quantity} />
+        <div className="mt-auto">
+          <AddToCartButton product={product} quantity={quantity} />
+        </div>
       </div>
       {/* <CartModal /> */}
     </div>
