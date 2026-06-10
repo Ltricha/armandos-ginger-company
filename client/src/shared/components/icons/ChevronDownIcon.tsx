@@ -1,4 +1,4 @@
-export default function CloseIcon() {
+export default function ChevronDownIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -7,7 +7,7 @@ export default function CloseIcon() {
       width="24px"
       fill="currentColor"
     >
-      <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+      <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
     </svg>
   );
 }

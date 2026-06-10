@@ -6,26 +6,26 @@ import { Link } from "react-router";
 
 export default function MobileMenu() {
   return (
-    <nav className="fixed bottom-10 left-5 bg-black px-6 py-2 rounded-4xl lg:hidden">
+    <nav className="fixed bottom-10 left-5 bg-black text-white px-6 py-2 rounded-4xl lg:hidden">
       <ul className="flex justify-between gap-6">
         <li>
-          <Link to="">
+          <Link to="/">
             <HomeIcon />
           </Link>
         </li>
         <li>
           <Link to="">
-            <SearchIcon color="#FFFFFF" />
+            <SearchIcon />
           </Link>
         </li>
         <li>
-          <Link to="">
+          <Link to="/drinks">
             {" "}
             <ShoppingBagIcon />
           </Link>
         </li>
         <li>
-          <Link to="">
+          <Link to="/cart">
             <ShoppingCartIcon />
           </Link>
         </li>
