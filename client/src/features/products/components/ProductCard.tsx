@@ -2,8 +2,8 @@ import { Link } from "react-router";
 import type { Product } from "../types/Product";
 import FavoriteIcon from "../../../shared/components/icons/FavoriteIcon";
 import AddShoppingCartIcon from "../../../shared/components/icons/AddShoppingCartIcon";
-import Toast from "../../../shared/components/ui/Toast";
-import { useState } from "react";
+// import Toast from "../../../shared/components/ui/Toast";
+// import { useState } from "react";
 
 interface ProductCardProps {
   product: Product;
@@ -14,7 +14,7 @@ export default function ProductCard({ product }: ProductCardProps) {
     console.log("Product toegevoegd aan verlanglijst.");
   }
 
-  function addToCart(e) {
+  function addToCart(e: React.MouseEvent<HTMLButtonElement>) {
     e.preventDefault();
     console.log("Product toegevoegd aan winkelwagen.");
   }
@@ -26,16 +26,16 @@ export default function ProductCard({ product }: ProductCardProps) {
       </button>
 
       <div className="flex flex-col gap-4">
-        <Link className="" to={`/drinks/${product.category}/${product.uuid}`}>
+        <Link className="" to={`/drinks/${product.category}/${product.id}`}>
           <img
-            className="rounded"
+            className="rounded hover:scale-120 transition-transform"
             src={product.images[0]}
             alt={product.description}
           />
         </Link>
 
         <div className="flex flex-col">
-          <Link className="" to={`/drinks/${product.category}/${product.uuid}`}>
+          <Link className="" to={`/drinks/${product.category}/${product.id}`}>
             <span className="font-bold hover:underline">{product.title}</span>
           </Link>
 

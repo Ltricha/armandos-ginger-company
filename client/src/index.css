@@ -101,10 +101,10 @@ button {
 button:focus,
 button:focus-visible {}
 
-input {
+/* input {
   border: none;
   outline: none;
-}
+} */
 
 
 @media screen and (max-width: 481px) {
