@@ -1,6 +1,7 @@
 import AddShoppingCartIcon from "../../../../shared/components/icons/AddShoppingCartIcon";
 import CheckIcon from "../../../../shared/components/icons/CheckIcon";
 import { useCartStore } from "../../../cart/store/useCartStore";
+import { useModalStore } from "../../../cart/store/useModalCartStore";
 import type { Product } from "../../types/Product";
 
 interface AddToCartButtonProps {
@@ -13,11 +14,13 @@ export default function AddToCartButton({
   quantity,
 }: AddToCartButtonProps) {
   const addToCart = useCartStore((state) => state.addToCart);
+  const openModal = useModalStore((state) => state.openModal);
   const cartItems = useCartStore((state) => state.cartItems);
 
   function handleOnClick(e: React.MouseEvent<HTMLButtonElement>) {
     e.preventDefault();
     addToCart(product, quantity);
+    openModal(product);
   }
 
   const added = cartItems.some(

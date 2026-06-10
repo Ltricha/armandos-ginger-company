@@ -35,7 +35,7 @@ export default function Products() {
       </section>
       <section className="py-5">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12">
             {products.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}

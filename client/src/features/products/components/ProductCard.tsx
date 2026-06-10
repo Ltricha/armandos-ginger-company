@@ -3,7 +3,6 @@ import type { Product } from "../types/Product";
 import FavoriteIcon from "../../../shared/components/icons/FavoriteIcon";
 // import Toast from "../../../shared/components/ui/Toast";
 import AddToCartButton from "./buttons/AddToCartButton";
-import CartModal from "../../cart/components/CartModal";
 
 interface ProductCardProps {
   product: Product;
@@ -43,7 +42,6 @@ export default function ProductCard({ product }: ProductCardProps) {
           <AddToCartButton product={product} quantity={quantity} />
         </div>
       </div>
-      {/* <CartModal /> */}
     </div>
   );
 }
